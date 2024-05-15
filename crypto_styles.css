@@ -1,0 +1,220 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #61dafb;
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #61dafb;
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1f1f1f;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid #61dafb;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+th, td {
+    padding: 20px;
+    border-bottom: 1px solid #444;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+th {
+    background-color: #61dafb; /* Blue */
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #222;
+}
+
+tbody tr:hover {
+    background-color: #333;
+    transform: scale(1.02);
+}
+
+.coin-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #FFC107; /* Yellow */
+    box-shadow: 0 0 20px rgba(255, 193, 7, 0.5);
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.coin-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.coin-icon:hover {
+    transform: scale(1.1) rotate(360deg);
+}
+
+.chart-container {
+    margin-top: 30px;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.chart-container canvas {
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #61dafb;
+}
+
+@media screen and (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    .coin-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+}
+/* Add this CSS to make the graph area white */
+.chart-container {
+    background-color: #fff; /* Set the background color to white */
+    
+}
+/* Add this CSS to make the text in the graph black */
+.apexcharts-text {
+    fill: #000; /* Set the fill color to black */
+}
+
+/* Add this CSS to change the color of the tooltip text to black */
+.apexcharts-tooltip {
+    color: #000; /* Set the color to black */
+}
+
+.update-button {
+    background-color: #a1a1f2d5; /* Set the background color to blue */
+    color: #fff; /* Set the text color to white */
+    border: none; /* Remove border */
+    border-radius: 12px; /* Add rounded corners */
+    padding: 8px 16px; /* Smaller padding */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block;
+    font-size: 14px; /* Smaller font size */
+    margin: 4px 2px;
+    transition-duration: 0.4s; /* Add animation when hovering */
+    cursor: pointer;
+    box-shadow: 0 0 10px #7777f9, 0 0 5px #7a7af1; /* Add blue glow */
+}
+
+.update-button:hover {
+    background-color: #1e90ff; /* Change the background color to a brighter blue when you hover over it */
+    color: white; /* Change the text color of the button when you hover over it */
+    box-shadow: 0 0 20px #1e90ff, 0 0 10px #1e90ff; /* Add brighter blue glow when hovering */
+}
+
+
+
+/* Add these CSS classes to change the color of numbers based on their sign */
+.positive-change {
+    color: green;
+}
+
+.negative-change {
+    color: red;
+}
+.apexcharts-menu-item {
+    color: black !important;
+}
+
+.time-period-dropdown {
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 5px; /* Add rounded corners */
+    padding: 5px;
+    background-color: #ffffff; /* Set the background color to white */
+    color: #000000; /* Set the text color to black */
+    font-size: 14px; /* Set the font size */
+    transition-duration: 0.4s; /* Add animation when hovering */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Add shadows */
+}
+
+.time-period-dropdown:hover {
+    background-color: #f2f2f2; /* Change the background color to a lighter shade when you hover over it */
+    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2); /* Add shadows when hovering */
+}
+
